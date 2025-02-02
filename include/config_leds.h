@@ -29,13 +29,15 @@ void turn_on_all_leds() {
 // Função de callback para desligar o LED após o tempo programado.
 int64_t turn_off_callback(alarm_id_t id, void *user_data) {
     switch (state) {
-        case 0: //liga todos os leds
+        case 0: //desativa o led vermelho
             gpio_put(LED_RED, false);
             state = 1;
+            add_alarm_in_ms(3000, turn_off_callback, NULL, false); // Agenda o segundo alarme para desativar o led amarelo.
         break;
         case 1:
             gpio_put(LED_YELLOW_BLUE, false);
             state = 2;
+            add_alarm_in_ms(3000, turn_off_callback, NULL, false); // Agenda o terceiro alarme para desativar o led verde.
         break;
         case 2:
             gpio_put(LED_GREEN, false);
@@ -43,7 +45,7 @@ int64_t turn_off_callback(alarm_id_t id, void *user_data) {
             leds_active  = false; // Indica que todos os leds foram desativados
         break;
     }
-    return 3000 * 1000; // Retorna 3000 ms (3 segundos) para o próximo alarme.
+    return 0;
 }
 
 #endif
