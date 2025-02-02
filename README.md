@@ -88,6 +88,7 @@ Abaixo está o mapeamento de conexões entre os componentes e a Raspberry Pi Pic
    | LED_RED          | GPIO 13                         |
    | LED_YELLOW       | GPIO 12                         |
    | LED_YELLOW_BLUE  | GPIO 11                         |
+   | BTN_A            | GPIO 5                          |
 
 **Observações**:
 
