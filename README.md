@@ -6,7 +6,8 @@
 
 Projeto da atividade **EmbarcaTech**, sobre Clock e Temporizadores. O sistema é ativado por um botão (pushbutton) e controla três LEDs (vermelho, amarelo e verde) em uma sequência pré-definida. O objetivo é demonstrar o uso de temporizadores, interrupções e callbacks no Pico SDK, além de implementar técnicas como debounce de botão para garantir um funcionamento robusto.
 
-Imagem irá aqui
+![image](https://github.com/user-attachments/assets/bd97eb56-e387-461a-94cb-81b6e9e342e5)
+
 
 ## Requisitos
 
